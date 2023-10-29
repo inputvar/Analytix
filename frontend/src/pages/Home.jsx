@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 function Home() {
 
-  const [isLogged, setIsLogged] = useState(true)
+  const [isLogged, setIsLogged] = useState(false)
 
 
   return (

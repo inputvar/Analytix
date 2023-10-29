@@ -1,9 +1,14 @@
 import React from 'react'
 import GoogleButton from 'react-google-button';
+import Header from '../components/Header';
 
 
 function Signup() {
   return (
+    <div>
+    <Header/>
+        <br></br>
+
     <main className="form-signin w-100 m-auto mt-5">
   <form>
     <h1 className="h3 mb-3 fw-normal">Please Sign Up</h1>
@@ -33,6 +38,7 @@ function Signup() {
 
   </form>
 </main>
+</div>
   )
 }
 

@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom";
 
-function Header() {
+function Header({logged}) {
 
-    const [logged, setLogged] = useState(false)
+    // const [logged, setLogged] = useState(false)
 
   return (
     <div>
@@ -22,13 +22,13 @@ function Header() {
         {/* <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
           <input type="search" className="form-control form-control-dark" placeholder="Search..." aria-label="Search" />
         </form> */}
-        <Link to="/about" className="nav-link px-2 text-white">About</Link>
-        <Link to="/contact" className="nav-link px-2 text-white">Contact</Link>
+        <Link to="/about" className="btn btn-outline-light me-4">About</Link>
+        <Link to="/contact" className="btn btn-outline-light me-4">Contact</Link>
 
 
-        {logged? <Link to="./feedback" className='nav-link px-2 text-white '>Feedback</Link>  : <div className="text-end">
-          <Link to="/login" type="button" className="btn btn-outline-light me-2">Login</Link>
-          <Link to="/signup" type="button" className="btn btn-outline-info">Sign-up</Link>
+        {logged? <Link to="./feedback" className='nav-link px-2 text-white'>Feedback</Link>  : <div className="text-end">
+          <Link to="/login" type="button" className="btn btn-outline-light me-4">Login</Link>
+          <Link to="/signup" type="button" className="btn btn-outline-light mr-2">Sign-up</Link>
         </div>
 }
       </div>

@@ -1,10 +1,14 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react';
+import { UserContext } from '../App';
 import GoogleButton from 'react-google-button';
 import Header from './Header';
 import { Link } from 'react-router-dom';
 
 
 function Login() {
+
+  const { logged, setLogged } = useContext(UserContext);
+
 
   return (
     <div>
@@ -35,7 +39,7 @@ function Login() {
         Remember me
       </label>
     </div> */}
-    <Link to="/" ><button className="btn btn-dark w-100 py-2 mt-5" onClick={(logged) => { return true }}>Login</button></Link>
+    <Link to="/" ><button className="btn btn-dark w-100 py-2 mt-5" onClick={()=>{setLogged(true)}}>Login</button></Link>
     <GoogleButton type="dark" className='mt-3 w-100' style={{"border-radius" : "3px"}}/>
   </form>
 </main>  

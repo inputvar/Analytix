@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react';
+import { UserContext } from '../App';
 import { Link } from "react-router-dom";
 
-function Header({logged}) {
+function Header() {
+  const { logged } = useContext(UserContext);
 
-    // const [logged, setLogged] = useState(false)
+    // const [logged, setLogged] = useState(true)
 
   return (
     <div>
@@ -27,8 +29,6 @@ function Header({logged}) {
 
 
         {logged? <Link to="./feedback" className='nav-link px-2 text-white'>Feedback</Link>  : <div className="text-end">
-          <Link to="/login" type="button" className="btn btn-outline-light me-4">Login</Link>
-          <Link to="/signup" type="button" className="btn btn-outline-light mr-2">Sign-up</Link>
         </div>
 }
       </div>

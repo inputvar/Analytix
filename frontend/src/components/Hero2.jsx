@@ -20,6 +20,16 @@ function Hero2() {
     <div class="container container-input my-5">
 
     {speak ? <div class="p-5 text-center bg-body-tertiary rounded-3">
+    <form>
+    <div className="form-floating mt-4">
+    <h3>Select Language:</h3>
+      <select className="form-select" value={language} onChange={handleLanguageChange}>
+        <option value="English">English</option>
+        <option value="Hindi">Hindi</option>
+      </select></div>
+      
+      </form>
+  </div>: <div class="p-5 text-center bg-body-tertiary rounded-3">
     <h1 class="text-body-emphasis my-4">Write Your Query</h1>
     <form>
     <div className="form-floating mt-4">
@@ -30,16 +40,6 @@ function Hero2() {
       <p class="lead">
       Want to speak instead? <button  className='btn' onClick={handleClickSpeak}>Click me.</button>
     </p>
-  </div>: <div class="p-5 text-center bg-body-tertiary rounded-3">
-    <form>
-    <div className="form-floating mt-4">
-    <h3>Select Language:</h3>
-      <select className="form-select" value={language} onChange={handleLanguageChange}>
-        <option value="English">English</option>
-        <option value="Hindi">Hindi</option>
-      </select></div>
-      
-      </form>
   </div>}
 
 </div>

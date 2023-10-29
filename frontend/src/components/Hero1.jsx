@@ -1,5 +1,6 @@
 import React from 'react'
 import lawyer from "../lawyer.jpg"
+import { Link } from 'react-router-dom'
 
 export default function Hero1() {
   return (
@@ -12,8 +13,8 @@ export default function Hero1() {
         <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">Find Your Right Attorney Now.</h1>
         <p className="lead fw-normal">Connect with the right attorney for your unique legal concerns. Our platform provides efficient and user-friendly legal support, making legal expertise accessible to everyone. <span className='fw-bold'>Submit Your Queries Now!</span> </p>
         <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-          <button type="button" className="btn btn-outline-dark btn-lg px-4 me-md-2">Login</button>
-          <button type="button" className="btn btn-outline-dark btn-lg px-4">Sign up</button>
+          <Link to="/login" type="button" className="btn btn-outline-dark btn-lg px-4 me-md-2">Login</Link>
+          <Link to="/signup" type="button" className="btn btn-outline-dark btn-lg px-4">Sign up</Link>
         </div>
       </div>
     </div>

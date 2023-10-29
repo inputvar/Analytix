@@ -70,9 +70,4 @@ def find_nearest_lawyers(csv_file, query_text, n_neighbors=5):
     # Convert the list of dictionaries to a JSON format
     json_output = json.dumps(neighbor_data, indent=4)
 
-    print(json_output)
-    
-# Example usage
-csv_file = 'finaldata.csv'
-query_text = "My brother ditched me for money, I am a simple man from Chennai, need a Tamil lawyer only, and his disposal days should be around 120"
-find_nearest_lawyers(csv_file, query_text, 5)
+    return json_output
